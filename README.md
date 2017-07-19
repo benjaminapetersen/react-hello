@@ -28,6 +28,12 @@ yarn start
 After that, consult the original [README.md](/docs/README.md) for other information.
 
 
+## Resources used
+
+The `/src/contacts` directory initially came from following along this tutorial:
+- http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/
+- https://github.com/jamesknelson/raw-react-part-3/
+
 
 <!--
 Organization

@@ -1,3 +1,8 @@
+// resource for learning "vanilla" react:
+// - http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/
+// - https://github.com/jamesknelson/raw-react-part-3/
+// following this, began to update it to use the standard tools,
+//  including imports, jsx, etc.
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/contacts.css';
