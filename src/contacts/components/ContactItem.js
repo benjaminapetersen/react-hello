@@ -10,15 +10,12 @@ var ContactItem = React.createClass({
 
   render: function() {
     return (
-      React.createElement('div', {className: 'ContactItem'},
-        React.createElement('a', {
-          className: 'ContactItem-name',
-          href: '#/contacts/'+this.props.id,
-        }, this.props.name),
-        React.createElement('div', {className: 'ContactItem-email'}, this.props.email),
-        React.createElement('div', {className: 'ContactItem-description'}, this.props.description)
-      )
-    )
+      <div className="ContactItem">
+        <a href={'#/contacts/'+this.props.id} className="ContactItem-name">{this.props.name}</a>
+        <div className="ContactItem-email">{this.props.email}</div>
+        <div className="ContactItem-description">{this.props.description}</div>
+      </div>
+    );
   },
 });
 

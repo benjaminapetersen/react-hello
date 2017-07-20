@@ -14,19 +14,19 @@ var ContactsView = React.createClass({
 
   render: function() {
     return (
-      React.createElement('div', {className: 'ContactsView'},
-        React.createElement('h1', {className: 'ContactsView-title'}, "Contacts"),
-        React.createElement('ul', {className: 'ContactsView-list'},
-          this.props.contacts.map(function(contact) {
-            return React.createElement(ContactItem, Object.assign(contact, {id: contact.key}))
-          })),
-        React.createElement(ContactForm, {
-          value: this.props.newContactForm,
-          onChange: this.props.onChangeContact,
-          onSubmit: this.props.onSubmitContact,
-        })
-      )
-    )
+      <div className="ContactsView">
+        <h1 className="ContactsView-title">Contacts</h1>
+        <ul className="ContactsView-list">
+          {this.props.contacts.map((contact, index) => {
+            return <ContactItem {...Object.assign({}, contact, {id: contact.key})}></ContactItem>
+          })}
+        </ul>
+        <ContactForm
+          value={this.props.newContactForm}
+          onChange={this.props.onChangeContact}
+          onSubmit={this.props.onSubmitContact}></ContactForm>
+      </div>
+    );
   },
 });
 

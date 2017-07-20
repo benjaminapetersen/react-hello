@@ -3,12 +3,12 @@ import React from 'react';
 var NotFoundView = React.createClass({
   propTypes: {},
 
-  render: function() {
+  render: () => {
     return (
-      React.createElement('div', {className: 'NotFoundView'},
-        React.createElement('h1', {className: 'NotFoundView-title'}, 'Not Found')
-      )
-    )
+      <div className="NotFoundView">
+        <h1 classname="NotFoundView-title">Not Found</h1>
+      </div>
+    );
   },
 });
 

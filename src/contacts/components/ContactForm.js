@@ -26,32 +26,32 @@ var ContactForm = React.createClass({
 
   render: function() {
     var errors = this.props.value.errors || {}
-
     return (
-      React.createElement('form', {onSubmit: this.onSubmit, className: 'ContactForm', noValidate: true},
-        React.createElement('input', {
-          type: 'text',
-          className: errors.name && 'ContactForm-error',
-          placeholder: 'Name (required)',
-          onChange: this.onNameInput,
-          value: this.props.value.name,
-          ref: 'name',
-        }),
-        React.createElement('input', {
-          type: 'email',
-          className: errors.email && 'ContactForm-error',
-          placeholder: 'Email (required)',
-          onChange: this.onEmailInput,
-          value: this.props.value.email,
-          noValidate: true,
-        }),
-        React.createElement('textarea', {
-          placeholder: 'Description',
-          onChange: this.onDescriptionInput,
-          value: this.props.value.description,
-        }),
-        React.createElement('button', {type: 'submit'}, "Save")
-      )
+      <form
+          onSubmit={this.onSubmit}
+          className="ContactForm"
+          noValidate="true">
+        <input
+          type="text"
+          className={errors.name && 'ContactForm-error'}
+          placeholder="Name (required)"
+          onChange={this.onNameInput}
+          value={this.props.value.name}
+          ref="name"></input>
+        <input
+          type="email"
+          className={errors.email && 'ContactForm-error'}
+          placeholder="Email (required)"
+          onChange={this.onEmailInput}
+          value={this.props.value.email}
+          noValidate="true"></input>
+        <textarea
+          placeholder="Description"
+          onChange={this.onDescriptionInput}
+          value={this.props.value.description}></textarea>
+        <button
+          type="submit">Save</button>
+      </form>
     )
   },
 });
