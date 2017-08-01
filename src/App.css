@@ -14,6 +14,11 @@
   color: white;
 }
 
+.App-nav a {
+  margin: 2px;
+  padding: 2px;
+}
+
 .App-intro {
   font-size: large;
 }
